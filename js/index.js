@@ -114,6 +114,18 @@ mapImage.addEventListener('mouseleave', () => {
 })
 
 
+// mouse enter // mouse leave // might be nesting?
+const boatImage = document.querySelector('.boatImg');
+console.log(boatImage);
+
+boatImage.addEventListener('mouseenter', () => {
+    boatImage.style.transform = 'scale(1.2)';
+    boatImage.style.transition = 'all 0.2s'
+})
+boatImage.addEventListener('mouseleave', () => {
+    boatImage.style.transform = 'scale(1.0)';
+    boatImage.style.transition = 'all 0.2s'
+})
 
 
 
