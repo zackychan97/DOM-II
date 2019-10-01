@@ -62,6 +62,16 @@ window.addEventListener('resize', () => {
 })
 
 
+// const text = document.querySelectorAll('.text-content');
+// window.addEventListener('resize', () => {
+//     console.log('Another console log you should see if you resize');
+//     textContent.style.background = 'red';
+// })
+
+
+
+
+
 //scroll
 
 const bodyDouble = document.querySelectorAll('body');
@@ -71,7 +81,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-//click
+//click & prevent default // maybe nested??
 const navbarLink = document.querySelectorAll('a');
 navbarLink.forEach(a=>{
     a.addEventListener('click', function(event) {
@@ -89,11 +99,41 @@ navbarLink.forEach(a=>{
 
 
 
-// mouseenter
+// mouseenter // mouse leave // might be nesting?
 const mapImage = document.querySelector('.mapImg');
 console.log(mapImage);
 
 mapImage.addEventListener('mouseenter', () => {
     mapImage.style.transform = 'scale(1.2)';
-    mapImage.style.transition = 'all 0.4s'
+    mapImage.style.transition = 'all 0.2s'
 })
+
+mapImage.addEventListener('mouseleave', () => {
+    mapImage.style.transform = 'scale(1.0';
+    mapImage.style.transition = 'all 0.2s'
+})
+
+
+
+
+
+
+
+// more click, i believe this is the nesting asked?
+
+const anotherBody = document.querySelector('body');
+
+anotherBody.addEventListener('click', () => {
+    body.style.backgroundColor='yellow';
+})
+const textContent = document.querySelector('.text-content');
+textContent.addEventListener('click', () => {
+    textContent.style.background = 'purple';
+})
+
+
+
+
+
+
+
