@@ -44,8 +44,56 @@ pressKey.addEventListener('keydown', () => {
 
 
 
+// document.querySelectorAll('.btn').forEach(el => {
+//     el.addEventListener('keydown', () => {
+//         el.style.background = red;
+//     })
+// })
 
 
 
-// wheel
 
+// resize
+
+const body = document.querySelector('body');
+window.addEventListener('resize', () => {
+    console.log('If you are seeing this, that means the the window is resized ');
+    body.style.background = '#FFA07A';
+})
+
+
+//scroll
+
+const bodyDouble = document.querySelectorAll('body');
+window.addEventListener('scroll', () => {
+    console.log('If you are seeing this, that means you scrolled.');
+    body.style.background = '#B0E0E6';
+})
+
+
+//click
+const navbarLink = document.querySelectorAll('a');
+navbarLink.forEach(a=>{
+    a.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log(a);
+    });
+});
+
+// const paragraphs = document.querySelectorAll('p');
+// paragraphs.forEach(a=> {
+//     paragraphs.addEventListener('click', function() {
+//         p.style.background = 'red';
+//     })
+// })
+
+
+
+// mouseenter
+const mapImage = document.querySelector('.mapImg');
+console.log(mapImage);
+
+mapImage.addEventListener('mouseenter', () => {
+    mapImage.style.transform = 'scale(1.2)';
+    mapImage.style.transition = 'all 0.4s'
+})
