@@ -1,5 +1,6 @@
 // Your code goes here
 
+// 1
 const logo = document.querySelector('.logo-heading');
 console.log(logo);
 
@@ -14,20 +15,43 @@ logo.addEventListener('dblclick', function(e){
 
 //mouse over
 
-
-const bus = document.querySelector('.bus-img');
+//2
+const bus = document.querySelector('.busImg');
 console.log(bus);
+bus.addEventListener('mouseenter', () => {
+    bus.style.transform = 'scale(1.16)';
+    bus.style.transition = 'all 0.2s'
+})
 
-bus.addEventListener('mouseover', (event) => {
-    console.log('moused over img');
-    bus.style.height = '100%';
-    // bus.style.width = '50%';
+bus.addEventListener('mouseleave', () => {
+    bus.style.transform = 'scale(1.0';
+    bus.style.transition = 'all 0.2s'
+})
+
+//3
+const tropicalBoat = document.querySelector('.boatTropic');
+console.log(tropicalBoat);
+tropicalBoat.addEventListener('mouseenter', () => {
+tropicalBoat.style.transform = 'scale(1.1)';
+tropicalBoat.style.transition = 'all 0.2s';
+})
+tropicalBoat.addEventListener('mouseleave', () => {
+    tropicalBoat.style.transform = 'scale(1.0';
+    tropicalBoat.style.transition = 'all 0.2s'
 })
 
 
 
-// keydown
 
+
+
+
+
+
+
+
+// keydown
+//4
 const pressKey = document.querySelector('body');
 console.log(pressKey);
 pressKey.addEventListener('keydown', () => {
@@ -54,7 +78,7 @@ pressKey.addEventListener('keydown', () => {
 
 
 // resize
-
+//5
 const body = document.querySelector('body');
 window.addEventListener('resize', () => {
     console.log('If you are seeing this, that means the the window is resized ');
@@ -73,7 +97,7 @@ window.addEventListener('resize', () => {
 
 
 //scroll
-
+//6
 const bodyDouble = document.querySelectorAll('body');
 window.addEventListener('scroll', () => {
     console.log('If you are seeing this, that means you scrolled.');
@@ -82,6 +106,7 @@ window.addEventListener('scroll', () => {
 
 
 //click & prevent default // maybe nested??
+//7
 const navbarLink = document.querySelectorAll('a');
 navbarLink.forEach(a=>{
     a.addEventListener('click', function(event) {
@@ -100,6 +125,7 @@ navbarLink.forEach(a=>{
 
 
 // mouseenter // mouse leave // might be nesting?
+//8
 const mapImage = document.querySelector('.mapImg');
 console.log(mapImage);
 
@@ -115,6 +141,7 @@ mapImage.addEventListener('mouseleave', () => {
 
 
 // mouse enter // mouse leave // might be nesting?
+//9
 const boatImage = document.querySelector('.boatImg');
 console.log(boatImage);
 
@@ -132,12 +159,14 @@ boatImage.addEventListener('mouseleave', () => {
 
 
 // more click, i believe this is the nesting asked?
+//10
 
 const anotherBody = document.querySelector('body');
 
 anotherBody.addEventListener('click', () => {
     body.style.backgroundColor='yellow';
 })
+//11
 const textContent = document.querySelector('.text-content');
 textContent.addEventListener('click', () => {
     textContent.style.background = 'purple';
